@@ -15,6 +15,7 @@
 .new-tweet textarea {
   padding: 5px 5px;
   width: 100%;
+  z-index: 0;
 }
 
 .counter {

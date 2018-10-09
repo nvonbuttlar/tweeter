@@ -24,7 +24,8 @@ body {
 
 .container {
   margin: auto;
-  padding: 1em 2em;
+  padding: 7em 2em;
+  padding-bottom: 700px;
   width: 450px;
   background-color: white;
 
