@@ -1,19 +1,15 @@
 .tweet {
   margin-top: 20px;
-}
-
-
-.tweet {
   border: 1px solid #a59b9b;
   border-radius: 5px;
+  opacity: 0.75;
 }
 
-
 .tweet:hover {
+  opacity: 1;
   border: 1px solid black;
   color: #244751;
 }
-
 
 .tweet header {
   background-color: #eeeeee;
@@ -31,24 +27,20 @@
   margin: 0px;
 }
 
-
 .tweet .avatar {
   margin-top: 7px;
   margin-right: 10px;
   height: 45px;
   width: 45px;
   border-radius: 5px;
-  border: solid;
-  border-color: #7b7878;
+  border: 1px solid #7b7878;
   float: left;
 }
-
 
 .tweet handle {
   float: right;
   font-size: 10px;
 }
-
 
 .tweet .content {
   height: 140px;
@@ -56,7 +48,6 @@
   font-size: 18px;
   word-wrap: break-word;
 }
-
 
 .tweet footer {
   height: 25px;

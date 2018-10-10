@@ -27,7 +27,7 @@ $( document ).ready(function() {
     // DATA VARIABLES
     const firstName   = tweetObject.user.name;
     const handle      = tweetObject.user.handle;
-    const avatar      = tweetObject.user.avatars["small"];
+    const avatar      = tweetObject.user.avatars["regular"];
     const content     = tweetObject.content.text;
     const dateCreated = tweetObject.created_at;
 
@@ -35,7 +35,7 @@ $( document ).ready(function() {
     const $tweet    = $("<article>").addClass('tweet');
     const $header   = $("<header>").appendTo($tweet);
     const $handle   = $("<handle>").text(handle).appendTo($header);
-    const $avatar   = $("<img/>", {src: avatar, alt:'profile pic'}).addClass('avatar').appendTo($header);
+    const $avatar   = $("<img/>", {src: avatar, alt:'profile picture'}).addClass('avatar').appendTo($header);
     const $name     = $("<p>").text(firstName).appendTo($header);
     const $content  = $("<main>").addClass('content').text(content).appendTo($tweet);
     const $footer   = $("<footer>").appendTo($tweet);
@@ -45,7 +45,6 @@ $( document ).ready(function() {
     const $retweet  = $("<i>").addClass('fas fa-retweet').appendTo($social);
     const $flag     = $("<i>").addClass('fas fa-flag').appendTo($social);
 
-// var img = $('<img />', { id: 'Myid', src: 'MySrc.gif',alt: 'MyAlt'})
 
 
 
