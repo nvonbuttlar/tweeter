@@ -1,18 +1,21 @@
-#tweet-container {
+.tweet {
   margin-top: 20px;
 }
 
-#tweet-container article {
+
+.tweet {
   border: 1px solid #a59b9b;
   border-radius: 5px;
 }
 
-#tweet-container article:hover {
+
+.tweet:hover {
   border: 1px solid black;
   color: #244751;
 }
 
-#tweet-container header {
+
+.tweet header {
   background-color: #eeeeee;
   height: 60px;
   padding: 0px 8px;
@@ -24,8 +27,12 @@
   border-top-left-radius: 5px;
 }
 
+.tweet header p {
+  margin: 0px;
+}
 
-#tweet-container img {
+
+.tweet .avatar {
   margin-top: 7px;
   margin-right: 10px;
   height: 45px;
@@ -36,13 +43,14 @@
   float: left;
 }
 
-#tweet-container handle {
+
+.tweet handle {
   float: right;
   font-size: 10px;
 }
 
 
-#tweet-container main {
+.tweet .content {
   height: 140px;
   padding: 28px 25px;
   font-size: 18px;
@@ -50,14 +58,30 @@
 }
 
 
-#tweet-container footer {
+.tweet footer {
   height: 25px;
-  /*border-top: thin;*/
   border-color: grey;
   padding: 0px 9px;
-  line-height: 2.5em;
   font-size: 10px;
   border-top: 1px solid #a59b9b;
+  margin-bottom: 7px;
+}
+
+.tweet footer .date-created {
+  float: left;
+}
+
+.tweet footer .social {
+  opacity: 0;
+  float: right;
+}
+
+.tweet:hover footer .social {
+  opacity: 1;
+}
+
+.social i {
+  margin: 0 3px;
 }
 
 
