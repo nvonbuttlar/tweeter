@@ -1,5 +1,7 @@
 "use strict";
 
+let moment = require("moment");
+
 const userHelper    = require("../lib/util/user-helper")
 
 const express       = require('express');
