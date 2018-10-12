@@ -1,5 +1,7 @@
 .new-tweet {
   padding: 8.5px 8.5px;
+  padding-bottom: 30px;
+  width: 400px;
   border: solid #a59b9b;
   border-width: thin;
   background-color: #eeeeee;
@@ -18,11 +20,30 @@
   z-index: 0;
 }
 
+.new-tweet input {
+  float: left;
+}
+
 .counter {
   text-align: right;
   display: block;
   float: right;
 }
+
+.error {
+  display: none;
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  background-color: #ef8383;
+  font-size: 20px;
+}
+
+
+
 
 
 

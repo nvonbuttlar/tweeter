@@ -38,6 +38,9 @@ $( document ).ready(function() {
 
 
   function renderTweets(tweets) {
+
+      $("#tweet-container").empty();
+
     // loops through tweets
     tweets.forEach(function (tweet) {
       // calls createTweetElement for each tweet
@@ -55,22 +58,38 @@ $( document ).ready(function() {
     })
   }
 
+  // TOGGLE BUTTON
   $(".compose-btn").click(function() {
     $(".new-tweet").slideToggle("slow", function() {
       $(".new-tweet textarea").focus();
     });
   });
 
+  // SUBMISSION WITH ENTER FN
+  // $("textarea").keyup(function(event) {
+  //   if (event.keyCode === 13) {
+
+  //   }
+  // });
+
+  // CLEAR FIELD AFTER SUBMISSION
+
+
+
+
+
   $("#tweet-form").on('submit', function(event){
     event.preventDefault();
     console.log($(this).serialize());
 
     // VAlIDATION CONDITIONS
-console.log()
+
+    $(".error").slideUp();
+
     if ($("textarea").val() === "") {
-      alert("Cannot submit an empty field");
+      $(".error").text("Error: Cannot submit empty tweet").slideDown();
     } else if (Number($(".counter").text()) < 0) {
-      alert("Cannot post more than 140 characters");
+      $(".error").text("Error: Cannot post more than 140 characters").slideDown();
     } else {
 
       $.ajax({
@@ -79,12 +98,13 @@ console.log()
         data: $(this).serialize(),
       }).then(function() {
         loadTweets();
+        $("#tweet-form textarea").filter("textarea").val("");
       });
-
     };
   });
 
   loadTweets();
+
 
 });
 
