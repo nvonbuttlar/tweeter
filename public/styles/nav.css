@@ -23,3 +23,40 @@
   font-size: 200%;
   line-height: 80px
 }
+
+#nav-bar .compose-btn {
+  float: right;
+  margin-top: 14px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  overflow: auto;
+  opacity: 0.8;
+}
+
+#nav-bar .compose-btn:hover {
+  opacity: 1;
+}
+
+.compose-btn .word {
+  float: right;
+  position: relative;
+  bottom: 3px;
+  margin-top: 17px;
+  color: #00a087;
+}
+
+.compose-btn:hover .word {
+  color: black;
+}
+
+.compose-btn .fa-edit {
+  float: left;
+  color: #00a087;
+}
+
+.compose-btn:hover .fa-edit {
+  color: black;
+}
+

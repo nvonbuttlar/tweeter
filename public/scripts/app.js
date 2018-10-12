@@ -55,11 +55,15 @@ $( document ).ready(function() {
     })
   }
 
+  $(".compose-btn").click(function() {
+    $(".new-tweet").slideToggle("slow", function() {
+      $(".new-tweet textarea").focus();
+    });
+  });
 
   $("#tweet-form").on('submit', function(event){
     event.preventDefault();
     console.log($(this).serialize());
-
 
     // VAlIDATION CONDITIONS
 console.log()
