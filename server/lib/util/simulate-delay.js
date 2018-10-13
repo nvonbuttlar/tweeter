@@ -8,7 +8,7 @@
 // realistic even while we use a simplistic "in-memory" db.
 
 function someMilliseconds() {
-  return Math.floor(Math.random() * 0);
+  return Math.floor(Math.random() * );
   //changed this for faster load.
 }
 
