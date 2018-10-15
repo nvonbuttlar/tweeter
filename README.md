@@ -13,5 +13,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
+- Body Parser
+- Chance
 - Express
+- md5
+- Moment
+- Mongo DB
 - Node 5.10.x or above
+
+
