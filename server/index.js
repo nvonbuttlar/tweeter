@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 
+// CONNECTION TO MONGO DB
+
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
     console.error(`Failed to connect: ${MONGODB_URI}`);
@@ -25,7 +27,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   // (hint hint).
   //
   // Because it exports a function that expects the `db` as a parameter, we can
-  // require it and pass the `db` parameter immediately:
+  // Require it and pass the `db` parameter immediately:
   const DataHelpers = require("./lib/data-helpers.js")(db);
 
   // The `tweets-routes` module works similarly: we pass it the `DataHelpers` object
@@ -36,11 +38,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   app.use("/tweets", tweetsRoutes);
 
 
-
 });
-
-
-
 
 
 app.listen(PORT, () => {

@@ -1,7 +1,7 @@
 .new-tweet {
   padding: 8.5px 8.5px;
   padding-bottom: 30px;
-  width: 400px;
+  width: 387px;
   border: solid #a59b9b;
   border-width: thin;
   background-color: #eeeeee;
@@ -17,11 +17,13 @@
 .new-tweet textarea {
   padding: 5px 5px;
   width: 100%;
+  outline: none;
   z-index: 0;
 }
 
 .new-tweet input {
   float: left;
+  outline: none;
 }
 
 .counter {

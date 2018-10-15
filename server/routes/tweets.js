@@ -40,7 +40,6 @@ module.exports = function(DataHelpers) {
         res.status(201).send();
       }
     });
-    console.log("TWEET SAVED???");
   });
 
   return tweetsRoutes;

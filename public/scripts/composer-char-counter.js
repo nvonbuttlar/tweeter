@@ -4,8 +4,6 @@ $(document).ready(function(){
 
 
   $('.new-tweet textarea').on('keyup', function(){
-    console.log(140 - $(this).val().length);
-
     let length = (140 - $(this).val().length)
 
     $('.counter').text(length); // activates character counter

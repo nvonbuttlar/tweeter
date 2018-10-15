@@ -16,7 +16,7 @@ $( document ).ready(function() {
     const content     = tweetObject.content.text;
     const dateCreated = tweetObject.created_at;
 
-    // POSTED TWEET
+    // STRUCTURE OF POSTED TWEET USING jQuery
     const $tweet    = $("<article>").addClass('tweet');
     const $header   = $("<header>").appendTo($tweet);
     const $handle   = $("<handle>").text(handle).appendTo($header);
@@ -32,7 +32,7 @@ $( document ).ready(function() {
 
 
     // This will return a tweet <article> containing
-    // the entire HTML structure of the tweet.
+    // The entire HTML structure of the tweet.
     return $tweet;
   }
 
@@ -41,10 +41,10 @@ $( document ).ready(function() {
 
       $("#tweet-container").empty();
 
-    // loops through tweets
+    // Loops through tweets
     tweets.forEach(function (tweet) {
-      // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
+      // Calls createTweetElement for each tweet
+      // Takes return value and appends it to the tweets container
       createTweetElement(tweet).prependTo("#tweet-container");
     })
   }
@@ -65,19 +65,8 @@ $( document ).ready(function() {
     });
   });
 
-  // SUBMISSION WITH ENTER FN
-  // $("textarea").keyup(function(event) {
-  //   if (event.keyCode === 13) {
 
-  //   }
-  // });
-
-  // CLEAR FIELD AFTER SUBMISSION
-
-
-
-
-
+  // POST TWEET
   $("#tweet-form").on('submit', function(event){
     event.preventDefault();
     console.log($(this).serialize());
@@ -99,12 +88,13 @@ $( document ).ready(function() {
       }).then(function() {
         loadTweets();
         $("#tweet-form textarea").filter("textarea").val("");
+        $(".counter").text(140);
+
       });
     };
   });
 
   loadTweets();
-
 
 });
 
