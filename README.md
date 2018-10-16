@@ -21,4 +21,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Mongo DB
 - Node 5.10.x or above
 
+## Screenshots
+!["Screenshot of load page with collapsed text box"](https://github.com/nvonbuttlar/tweeter/blob/master/docs/sample_page.png)
+!["Screenshot of close up error message and hover state of tweet"](https://github.com/nvonbuttlar/tweeter/blob/master/docs/hover_state.png)
+!["Screenshot of other error and active character counter"](https://github.com/nvonbuttlar/tweeter/blob/master/docs/error_msg.png)
 
